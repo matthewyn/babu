@@ -1,14 +1,14 @@
-import { barlow } from "@/app/fonts";
-import { Button, Input, Modal, ModalBody, ModalContent, ModalHeader } from "@nextui-org/react";
-import { AcmeLogo } from "./logo";
-import Cleaner from "/public/cleaner.jpg";
-import Image from "next/image";
-import Ribbons from "./ribbons";
 import Flag from "/public/flag.png";
+import Cleaner from "/public/cleaner.jpg";
+import { AcmeLogo } from "./logo";
+import Ribbons from "./ribbons";
+import { barlow } from "@/app/fonts/fonts";
+import { Button, Input, Modal, ModalBody, ModalContent, ModalHeader } from "@nextui-org/react";
+import Image from "next/image";
 
 export default function Advertise() {
   return (
-    <Modal className={`${barlow.className}`} size="3xl" isDismissable={false} isKeyboardDismissDisabled={true}>
+    <Modal defaultOpen className={`${barlow.className}`} size="3xl" isDismissable={false} isKeyboardDismissDisabled={true} aria-label="Daftarkan dirimu agar mendapatkan diskon untuk pembelian pertama">
       <ModalContent>
         {(onClose) => (
           <section className="grid grid-cols-[auto_1fr]">
@@ -27,7 +27,7 @@ export default function Advertise() {
                 <Button color="success" size="lg" className="uppercase font-semibold">
                   Tukarkan
                 </Button>
-                <p className="text-sm">Dengan berlangganan, Anda setuju untuk menerima pesan pemasaran otomatis berulang di email ini. </p>
+                <small className="mt-3">Dengan berlangganan, Anda setuju untuk menerima pesan pemasaran otomatis berulang di email ini. </small>
               </ModalBody>
             </article>
           </section>

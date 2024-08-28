@@ -17,6 +17,10 @@ const config: Config = {
         "green-tint": "#22ad01",
         "green-extra-tint": "#d5f8cc",
         "green-extra-shade": "#0c3d37",
+        "green-special": "#00d959",
+        "beige-shade": "#f4f2f0",
+        "gray-tint": "#f5f5f7",
+        "gray-shade": "#d2d2d7",
       },
       rotate: {
         "250": "250deg",

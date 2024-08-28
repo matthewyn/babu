@@ -1,9 +1,9 @@
 "use client";
 
-import { FooterContextType, useFooterContext } from "@/context/is-footer";
-import { Button, Link } from "@nextui-org/react";
 import { BsCursorFill, BsFillGeoAltFill } from "react-icons/bs";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import { FooterContextType, useFooterContext } from "@/context/is-footer";
+import { Button, Link } from "@nextui-org/react";
 
 export default function Footer() {
   const { isFooter, setIsFooter } = useFooterContext() as FooterContextType;
@@ -85,6 +85,9 @@ export default function Footer() {
             </li>
             <li>
               <a href="#">Kerja Sama</a>
+            </li>
+            <li>
+              <a href="/lingkungan">Lingkungan</a>
             </li>
           </ul>
         </div>
