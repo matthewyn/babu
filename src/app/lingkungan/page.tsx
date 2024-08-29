@@ -1,6 +1,6 @@
 "use client";
 
-import Environment from "/public/environment.png";
+import Safety from "/public/safety.svg";
 import CustomArrow from "@/components/custom-arrow";
 import { playpen } from "../fonts/fonts";
 import { RiFlowerFill } from "react-icons/ri";
@@ -86,7 +86,7 @@ export default function Lingkungan() {
           <article className="grid grid-cols-3 mt-12 gap-4">
             <Card className="shadow-none bg-beige-shade p-4">
               <CardBody>
-                <RiFlowerFill size={32} color={`var(green-special)`} />
+                <RiFlowerFill size={32} color={`var(--green-special)`} />
                 <p className="text-xl font-medium mt-4">
                   Kami memperkenalkan jajaran 18 <TextUnderlined text="produk pilihan organik" />
                   kami.<sup className="underline">1</sup>
@@ -95,7 +95,7 @@ export default function Lingkungan() {
             </Card>
             <Card className="shadow-none bg-beige-shade p-4">
               <CardBody>
-                <MdEnergySavingsLeaf size={32} color={`var(green-special)`} />
+                <MdEnergySavingsLeaf size={32} color={`var(--green-special)`} />
                 <p className="text-xl font-medium mt-4">
                   <TextUnderlined text="Pengurangan konsumsi energi hingga 20%" />
                   melalui penggunaan teknologi pembersihan yang lebih efisien kami.<sup className="underline">2</sup>
@@ -104,7 +104,7 @@ export default function Lingkungan() {
             </Card>
             <Card className="shadow-none bg-beige-shade p-4">
               <CardBody>
-                <FaRecycle size={32} color={`var(green-special)`} />
+                <FaRecycle size={32} color={`var(--green-special)`} />
                 <p className="text-xl font-medium mt-4">
                   <TextUnderlined text="Menghemat lebih dari 15.000 liter air" />
                   setiap bulan melalui sistem daur ulang air.<sup className="underline">3</sup>
@@ -124,7 +124,7 @@ export default function Lingkungan() {
             Semua produk yang kami gunakan telah dilengkapi dengan fitur food contact, food grade, dan phosphat free. Kami juga memastikan bahwa tidak ada bahan berbahaya (B3) yang digunakan dalam produk kami, sehingga aman bagi kesehatan
             dan lingkungan.
           </p>
-          <Image src={Environment} quality={80} alt="Berbagai sertifikasi dari berbagai lini produk Kami" className="mt-6" />
+          <Image src={Safety} alt="Berbagai sertifikasi dari berbagai lini produk Kami" className="mt-6" />
         </div>
       </section>
       <section className="bg-beige-shade py-36">
@@ -136,7 +136,7 @@ export default function Lingkungan() {
           <p className="font-medium text-xl mt-6 max-w-2xl">Ada banyak tindakan kecil yang bisa Anda lakukan untuk menjaga kebersihan dan kesehatan lingkungan kita.</p>
           <Card className="shadow-none p-14 mt-16">
             <CardBody className="text-center max-w-lg mx-auto">
-              <BsGlobeAsiaAustralia className="mx-auto" color={`var(green-special)`} size={52} />
+              <BsGlobeAsiaAustralia className="mx-auto" color={`var(--green-special)`} size={52} />
               <h3 className="text-4xl font-semibold mt-6">
                 <TextUnderlined text="Dapatkan" />
                 tips pembersihan organik secara gratis.

@@ -5,9 +5,9 @@ import HeroBannerCloseUp from "/public/hero-banner-closeup.jpg";
 import HeroBannerDesk from "/public/hero-banner-desk.jpg";
 import HeroBannerRefrigerator from "/public/hero-banner-refrigerator.jpg";
 import HeroBannerToilet from "/public/hero-banner-toilet.jpg";
-import Sparkles from "/public/sparkles.png";
-import Droplet from "/public/droplet.png";
-import ShieldCheck from "/public/shield-check.png";
+import Sparkles from "/public/sparkles.svg";
+import Droplet from "/public/droplet.svg";
+import ShieldCheck from "/public/shield-check.svg";
 import Leaf from "/public/leaf.webp";
 import LeafSingle from "/public/leaf-single.webp";
 import RcpZen07 from "/public/rcp-zen-07.png";
@@ -18,7 +18,7 @@ import Firefox from "/public/firefox.png";
 import { BsCheck, BsExclamationCircle } from "react-icons/bs";
 import { HiHandThumbUp } from "react-icons/hi2";
 import { Button } from "@nextui-org/button";
-import { Tabs, Tab, Card, CardHeader, Divider, CardBody, Chip, Tooltip } from "@nextui-org/react";
+import { Tabs, Tab, Card, CardHeader, Divider, CardBody, Chip, Tooltip, Accordion, AccordionItem } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Ratings from "@/components/ratings";
 import Advertise from "@/components/advertise";
@@ -119,17 +119,17 @@ export default function Home() {
             <h2 className="rounded-full border border-gray-300 inline-block uppercase px-4 py-2 text-sm font-semibold">Kenapa Memilih Kami</h2>
             <article className="grid grid-cols-3 mt-14 gap-10">
               <div>
-                <Image src={Sparkles} alt="Pembersihan mendetail" quality={80} />
+                <Image src={Sparkles} alt="Pembersihan mendetail" />
                 <h3 className="font-semibold text-lg mt-6">Pembersihan mendetail & menyeluruh</h3>
                 <p className="mt-6 text-sm">Pembersihan tidak hanya terbatas pada permukaan yang terlihat, tetapi juga bagian yang sering terlupakan seperti di belakang perabot, sudut-sudut ruangan, dan area tersembunyi lainnya.</p>
               </div>
               <div>
-                <Image src={ShieldCheck} alt="Menghilangkan kerak membandel" quality={80} />
+                <Image src={ShieldCheck} alt="Menghilangkan kerak membandel" />
                 <h3 className="font-semibold text-lg mt-6">Bisa menghilangkan kerak membandel</h3>
                 <p className="text-sm mt-6">Kami menyediakan jasa pembersihan ruangan profesional yang dapat mengatasi kerak membandel di berbagai permukaan.</p>
               </div>
               <div>
-                <Image src={Droplet} alt="Alat kebersihan organik" quality={80} />
+                <Image src={Droplet} alt="Alat kebersihan organik" />
                 <h3 className="font-semibold text-lg mt-6">Menggunakan alat kebersihan organik</h3>
                 <p className="mt-6 text-sm">Kami menawarkan jasa pembersihan ruangan untuk rumah, hotel, restoran, dan kantor dengan menggunakan produk pembersih organik yang ramah lingkungan.</p>
               </div>
@@ -223,14 +223,11 @@ export default function Home() {
                         <Button color="success">Pesan sekarang</Button>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="pt-8">
+                      <CardBody className="py-8">
                         <ul className="flex flex-col gap-3">
                           <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />1 Ruangan
-                          </li>
-                          <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Termasuk Taman
+                            Kamar
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
@@ -238,7 +235,7 @@ export default function Home() {
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Mencuci Perabot
+                            Toilet
                           </li>
                         </ul>
                       </CardBody>
@@ -250,7 +247,7 @@ export default function Home() {
                             <BsExclamationCircle size={20} />
                           </div>
                         </Tooltip>
-                        <p className="text-xl">Kost</p>
+                        <p className="text-xl">Rumah</p>
                         <div>
                           <p>
                             Rp <span className="text-2xl font-semibold">195.000</span>
@@ -264,14 +261,11 @@ export default function Home() {
                         <Button color="success">Pesan sekarang</Button>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="pt-8">
+                      <CardBody className="py-8">
                         <ul className="flex flex-col gap-3">
                           <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />1 Ruangan
-                          </li>
-                          <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Termasuk Taman
+                            Toilet
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
@@ -279,7 +273,15 @@ export default function Home() {
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Mencuci Perabot
+                            Kamar Tidur
+                          </li>
+                          <li className="flex gap-4">
+                            <BsCheck size={25} color="green" />
+                            Ruang Tamu
+                          </li>
+                          <li className="flex gap-4">
+                            <BsCheck size={25} color="green" />
+                            Balcony
                           </li>
                         </ul>
                       </CardBody>
@@ -291,7 +293,7 @@ export default function Home() {
                             <BsExclamationCircle size={20} />
                           </div>
                         </Tooltip>
-                        <p className="text-xl">Kost</p>
+                        <p className="text-xl">Kantor</p>
                         <div>
                           <p>
                             Rp <span className="text-2xl font-semibold">225.000</span>
@@ -305,23 +307,15 @@ export default function Home() {
                         <Button color="success">Pesan sekarang</Button>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="pt-8">
+                      <CardBody className="py-8">
                         <ul className="flex flex-col gap-3">
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            <span className="bg-green-extra-tint">1 Ruangan</span>
+                            Ruangan
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Termasuk Taman
-                          </li>
-                          <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />
-                            Dapur
-                          </li>
-                          <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />
-                            Mencuci Perabot
+                            Toilet
                           </li>
                         </ul>
                       </CardBody>
@@ -333,7 +327,7 @@ export default function Home() {
                             <BsExclamationCircle size={20} />
                           </div>
                         </Tooltip>
-                        <p className="text-xl">Kost</p>
+                        <p className="text-xl">Restaurant</p>
                         <div>
                           <p>
                             Rp <span className="text-2xl font-semibold">225.000</span>
@@ -347,23 +341,19 @@ export default function Home() {
                         <Button color="success">Pesan sekarang</Button>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="pt-8">
+                      <CardBody className="py-8">
                         <ul className="flex flex-col gap-3">
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            <span className="bg-green-extra-tint">1 Ruangan</span>
+                            Ruang Makan
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Termasuk Taman
+                            Toilet
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
                             Dapur
-                          </li>
-                          <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />
-                            Mencuci Perabot
                           </li>
                         </ul>
                       </CardBody>
@@ -403,14 +393,11 @@ export default function Home() {
                         <Button color="success">Pesan sekarang</Button>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="pt-8">
+                      <CardBody className="py-8">
                         <ul className="flex flex-col gap-3">
                           <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />1 Ruangan
-                          </li>
-                          <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Termasuk Taman
+                            Kamar
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
@@ -418,7 +405,7 @@ export default function Home() {
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Mencuci Perabot
+                            Toilet
                           </li>
                         </ul>
                       </CardBody>
@@ -430,7 +417,7 @@ export default function Home() {
                             <BsExclamationCircle size={20} />
                           </div>
                         </Tooltip>
-                        <p className="text-xl">Kost</p>
+                        <p className="text-xl">Rumah</p>
                         <div>
                           <p>
                             Rp <span className="text-2xl font-semibold">275.000</span>
@@ -444,14 +431,11 @@ export default function Home() {
                         <Button color="success">Pesan sekarang</Button>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="pt-8">
+                      <CardBody className="py-8">
                         <ul className="flex flex-col gap-3">
                           <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />1 Ruangan
-                          </li>
-                          <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Termasuk Taman
+                            Toilet
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
@@ -459,7 +443,15 @@ export default function Home() {
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Mencuci Perabot
+                            Kamar Tidur
+                          </li>
+                          <li className="flex gap-4">
+                            <BsCheck size={25} color="green" />
+                            Ruang Tamu
+                          </li>
+                          <li className="flex gap-4">
+                            <BsCheck size={25} color="green" />
+                            Balcony
                           </li>
                         </ul>
                       </CardBody>
@@ -471,7 +463,7 @@ export default function Home() {
                             <BsExclamationCircle size={20} />
                           </div>
                         </Tooltip>
-                        <p className="text-xl">Kost</p>
+                        <p className="text-xl">Kantor</p>
                         <div>
                           <p>
                             Rp <span className="text-2xl font-semibold">305.000</span>
@@ -485,23 +477,15 @@ export default function Home() {
                         <Button color="success">Pesan sekarang</Button>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="pt-8">
+                      <CardBody className="py-8">
                         <ul className="flex flex-col gap-3">
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            <span className="bg-green-extra-tint">1 Ruangan</span>
+                            Ruangan
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Termasuk Taman
-                          </li>
-                          <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />
-                            Dapur
-                          </li>
-                          <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />
-                            Mencuci Perabot
+                            Toilet
                           </li>
                         </ul>
                       </CardBody>
@@ -513,7 +497,7 @@ export default function Home() {
                             <BsExclamationCircle size={20} />
                           </div>
                         </Tooltip>
-                        <p className="text-xl">Kost</p>
+                        <p className="text-xl">Restaurant</p>
                         <div>
                           <p>
                             Rp <span className="text-2xl font-semibold">305.000</span>
@@ -527,23 +511,19 @@ export default function Home() {
                         <Button color="success">Pesan sekarang</Button>
                       </CardHeader>
                       <Divider />
-                      <CardBody className="pt-8">
+                      <CardBody className="py-8">
                         <ul className="flex flex-col gap-3">
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            <span className="bg-green-extra-tint">1 Ruangan</span>
+                            Ruang Makan
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
-                            Termasuk Taman
+                            Toilet
                           </li>
                           <li className="flex gap-4">
                             <BsCheck size={25} color="green" />
                             Dapur
-                          </li>
-                          <li className="flex gap-4">
-                            <BsCheck size={25} color="green" />
-                            Mencuci Perabot
                           </li>
                         </ul>
                       </CardBody>
@@ -553,6 +533,52 @@ export default function Home() {
               </Tabs>
             </div>
           </motion.div>
+        </section>
+        <section>
+          <div className="max-w-5xl mx-auto">
+            <motion.h2 className="text-4xl text-center mb-2" variants={globalVariants} viewport={{ once: true, margin: "-80px" }}>
+              Frequent questions
+            </motion.h2>
+            <Accordion>
+              <AccordionItem key="1" aria-label="Perbedaan general cleaning dan deep cleaning" title="Apa sih perbedaan general cleaning dan deep cleaning?">
+                Layanan general cleaning dan deep cleaning memiliki perbedaan signifikan dalam tingkat kebersihan yang dicapai. General cleaning mencakup tugas-tugas dasar seperti menyapu, mengepel, membersihkan sarang laba-laba yang
+                terjangkau, mencuci piring, merapikan kamar dan ruangan lain, membersihkan kaca, serta membersihkan kamar mandi dengan kotoran ringan tanpa kerak dan karat, serta membersihkan halaman. Sebaliknya, deep cleaning menawarkan
+                pembersihan yang lebih mendalam dan menyeluruh, termasuk menyapu, mengepel, dan menggunakan vacuum; membersihkan seluruh sudut ruangan; mencuci piring dan membersihkan seluruh dapur; merapikan kamar dan ruangan lainnya
+                dengan lebih detail; membersihkan kaca dengan menghilangkan kerak air, lumut, dan karat; serta membersihkan kamar mandi yang memiliki kotoran, karat, dan kerak membandel. Deep cleaning juga mencakup pembersihan mendetail
+                pada semua barang yang ada, memastikan setiap bagian benar-benar bersih dan rapi.
+              </AccordionItem>
+              <AccordionItem key="2" aria-label="Rata-rata waktu pengerjaan dari general cleaning dan deep cleaning" title="Berapa lama rata-rata waktu pengerjaan dari general cleaning dan deep cleaning?">
+                Waktu pengerjaan untuk layanan general cleaning dan deep cleaning dapat bervariasi tergantung pada ukuran dan kondisi area yang dibersihkan. Rata-rata waktu yang dibutuhkan untuk general cleaning adalah sekitar 1-2 jam.
+                Sedangkan, rata-rata waktu pengerjaan untuk deep cleaning adalah sekitar 2-3 jam, namun bisa lebih lama jika area yang dibersihkan cukup luas atau memiliki tingkat kotoran yang tinggi.
+              </AccordionItem>
+              <AccordionItem key="3" aria-label="Fitur membership di layanan Kami" title="Apakah ada fitur membership di layanan Kami?">
+                Saat ini, kami belum memiliki fitur membership, namun kami sangat memahami betapa pentingnya fitur ini bagi banyak pengguna kami. Oleh karena itu, kami dengan senang hati mengumumkan bahwa fitur membership akan segera hadir
+                dalam waktu dekat!
+              </AccordionItem>
+              <AccordionItem key="4" aria-label="Cara menyampaikan keluhan terhadap layanan Kami" title="Bagaimana cara menyampaikan keluhan terhadap layanan Kami?">
+                Kami sangat menghargai setiap masukan dari pelanggan kami, termasuk keluhan, karena hal tersebut membantu kami meningkatkan kualitas layanan. Jika Anda mengalami masalah atau ketidakpuasan terhadap layanan yang diberikan,
+                berikut adalah langkah-langkah yang dapat Anda ikuti untuk menyampaikan keluhan:
+                <ol className="list-decimal ml-3">
+                  <li>
+                    <strong className="font-semibold">Hubungi Admin</strong>: Anda dapat menyampaikan keluhan dengan menghubungi admin kami melalui salah satu saluran komunikasi yang tersedia, seperti WhatsApp, email, atau telepon. Pastikan
+                    untuk mencantumkan detail keluhan Anda, termasuk tanggal layanan, nama cleaner yang bersangkutan (jika diketahui), dan deskripsi lengkap mengenai masalah yang Anda alami.
+                  </li>
+                  <li>
+                    <strong className="font-semibold">Informasikan Keluhan</strong>: Saat menghubungi admin, berikan informasi yang jelas dan lengkap mengenai keluhan Anda. Semakin banyak detail yang Anda sampaikan, semakin mudah bagi kami
+                    untuk memahami dan menindaklanjuti masalah tersebut.
+                  </li>
+                  <li>
+                    <strong className="font-semibold">Proses Tindak Lanjut</strong>: Setelah keluhan Anda diterima, tim kami akan segera menindaklanjuti dengan cleaner yang bersangkutan atau pihak terkait lainnya untuk melakukan investigasi
+                    lebih lanjut. Kami akan berusaha secepat mungkin untuk menyelesaikan masalah dan memastikan bahwa hal serupa tidak terjadi di masa mendatang.
+                  </li>
+                  <li>
+                    <strong className="font-semibold">Umpan Balik dan Solusi</strong>: Kami akan menghubungi Anda kembali setelah proses investigasi selesai untuk memberikan umpan balik dan solusi yang sesuai. Kami berkomitmen untuk
+                    menyelesaikan setiap keluhan dengan adil dan transparan, dan kami akan berupaya untuk memastikan bahwa Anda puas dengan hasilnya.
+                  </li>
+                </ol>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </section>
       </main>
       <Advertise />

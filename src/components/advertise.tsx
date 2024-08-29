@@ -1,6 +1,6 @@
 import Flag from "/public/flag.png";
 import Cleaner from "/public/cleaner.jpg";
-import { AcmeLogo } from "./logo";
+import Logo from "./logo";
 import Ribbons from "./ribbons";
 import { barlow } from "@/app/fonts/fonts";
 import { Button, Input, Modal, ModalBody, ModalContent, ModalHeader } from "@nextui-org/react";
@@ -18,7 +18,7 @@ export default function Advertise() {
             </div>
             <article>
               <ModalHeader className="flex flex-col items-center">
-                <AcmeLogo />
+                <Logo />
               </ModalHeader>
               <ModalBody className="text-center">
                 <h2 className="uppercase text-3xl text-green-extra-shade font-black">Diskon 30% Untuk Pembelian Pertama</h2>

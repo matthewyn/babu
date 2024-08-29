@@ -2,6 +2,7 @@
 
 import { BsCursorFill, BsFillGeoAltFill } from "react-icons/bs";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import Logo from "./logo";
 import { FooterContextType, useFooterContext } from "@/context/is-footer";
 import { Button, Link } from "@nextui-org/react";
 
@@ -12,7 +13,7 @@ export default function Footer() {
     <footer className="py-20">
       <div className="max-w-5xl mx-auto grid grid-cols-5">
         <div className="flex flex-col">
-          <p className="font-bold">ACME</p>
+          <Logo />
           <p className="flex items-center gap-2 mt-3">
             <BsFillGeoAltFill />
             <span>Semarang</span>
@@ -29,7 +30,7 @@ export default function Footer() {
               <FaInstagram />
             </Button>
           </div>
-          <small className="mt-auto">&copy; Acme</small>
+          <small className="mt-auto">&copy; iClean</small>
         </div>
         <div>
           <h4>Produk</h4>
@@ -75,7 +76,7 @@ export default function Footer() {
           <h4>Perusahaan</h4>
           <ul className="flex flex-col gap-1 mt-3 text-zinc-500">
             <li>
-              <a href="#">Tentang Kami</a>
+              <a href="/kepemimpinan">Tentang Kami</a>
             </li>
             <li>
               <a href="#">Pelanggan</a>
@@ -112,7 +113,7 @@ export default function Footer() {
           </ul>
         </div>
         <small className="col-span-5 border-t mt-8 pt-8">
-          Hak cipta © 2024 Babu. Semua hak cipta atas konten di situs ini dilindungi oleh undang-undang. Dilarang menyalin, menyebarkan, atau menggunakan materi apa pun tanpa izin tertulis dari pemilik hak cipta.
+          Hak cipta © 2024 iClean. Semua hak cipta atas konten di situs ini dilindungi oleh undang-undang. Dilarang menyalin, menyebarkan, atau menggunakan materi apa pun tanpa izin tertulis dari pemilik hak cipta.
         </small>
       </div>
     </footer>

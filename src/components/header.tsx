@@ -1,8 +1,8 @@
 "use client";
 
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button, NavbarProps } from "@nextui-org/react";
-import { AcmeLogo } from "./logo";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { useState } from "react";
+import Logo from "./logo";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,8 +14,7 @@ export default function Header() {
       <NavbarContent className="border-b">
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <Logo />
         </NavbarBrand>
       </NavbarContent>
 
@@ -31,7 +30,7 @@ export default function Header() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/kepemimpinan">
             Tentang Kami
           </Link>
         </NavbarItem>
