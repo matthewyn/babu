@@ -17,7 +17,6 @@ export default function Header() {
           <Logo />
         </NavbarBrand>
       </NavbarContent>
-
       <NavbarContent className="hidden sm:flex gap-4 border-b -mx-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="/produk">
@@ -32,6 +31,11 @@ export default function Header() {
         <NavbarItem>
           <Link color="foreground" href="/kepemimpinan">
             Tentang Kami
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/cleaner">
+            Partner
           </Link>
         </NavbarItem>
       </NavbarContent>
