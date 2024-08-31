@@ -8,7 +8,7 @@ export default function TextWavy({ text }: TextWavyProps) {
   return (
     <>
       {" "}
-      <motion.span className="wavy-text" initial={{ backgroundSize: "0% 0.2em" }} animate={{ backgroundSize: "100% 0.2em" }}>
+      <motion.span className="wavy-text" initial={{ backgroundSize: "0% 0.2em" }} whileInView={{ backgroundSize: "100% 0.2em" }} viewport={{ once: true }}>
         {text}
       </motion.span>{" "}
     </>

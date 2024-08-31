@@ -12,6 +12,7 @@ const config: Config = {
         "product-detail-clean": "url('/product-detail-clean.jpg')",
         "product-detail-safe": "url('/product-detail-safe.jpg')",
         "cleaner-single": "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/cleaner-single.jpg')",
+        ihome: "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/iHome.jpg')",
       },
       colors: {
         "green-shade": "#008000",
@@ -26,6 +27,7 @@ const config: Config = {
         "orange-tint": "#ffae62",
         "purple-tint": "#d48bc8",
         "pink-tint": "#ff808b",
+        "blue-tint": "#74d2e7",
       },
       rotate: {
         "250": "250deg",

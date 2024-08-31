@@ -154,7 +154,7 @@ export default function Produk() {
                       <Image src={RcpZen15} alt="Rcp zen 15" quality={80} height={300} className="mt-20 ml-6" />
                     </article>
                   </div>
-                  <button className="text-2xl text-right ml-auto items-center flex gap-4 font-semibold mt-16" onClick={shiftLayout}>
+                  <button className="text-2xl text-right ml-auto items-center flex gap-4 font-semibold mt-16" onClick={shiftLayout} aria-label="Klik tombol ini untuk melihat detail dari produk Kami">
                     <div className="relative">
                       <motion.span variants={slidingTextVariants} initial="hidden" whileInView="visible" custom={0.75} viewport={{ once: true }}>
                         Selengkapnya tentang
@@ -192,7 +192,7 @@ export default function Produk() {
                       <TextReveal text="Dapat mendukung proses pembersihan media, instrumen, atau boiler dari kerak kalsium." />
                     </li>
                   </ul>
-                  <button className="text-2xl text-right ml-auto items-center flex gap-4 font-semibold mt-16" onClick={shiftLayout}>
+                  <button className="text-2xl text-right ml-auto items-center flex gap-4 font-semibold mt-16" onClick={shiftLayout} aria-label="Klik tombol ini untuk melihat detail dari produk Kami">
                     <div className="relative">
                       <motion.span variants={slidingTextVariants} initial="hidden" whileInView="visible" custom={0.75} viewport={{ once: true }}>
                         Selengkapnya tentang
@@ -211,7 +211,7 @@ export default function Produk() {
               <section className="py-20">
                 <div className="max-w-5xl mx-auto">
                   <h2 className="text-5xl font-semibold leading-tight text-center">Penilaian customer</h2>
-                  <motion.article className="grid grid-cols-3 gap-4 mt-12" initial="hidden" whileInView="visible" transition={{ staggerChildren: 0.15 }}>
+                  <motion.article className="grid grid-cols-3 gap-4 mt-12" initial="hidden" whileInView="visible" transition={{ staggerChildren: 0.15 }} viewport={{ once: true }}>
                     <MotionCard className="shadow-none bg-beige-shade p-4" variants={globalVariants} viewport={{ once: true }}>
                       <CardBody>
                         <p className="text-xl">
@@ -351,7 +351,7 @@ export default function Produk() {
                 </section>
               </motion.div>
               <motion.div variants={opacityButtonVariants} initial="hidden" animate="visible" exit="exit" className="fixed bottom-6 left-16 flex w-72 max-w-72 items-center gap-6">
-                <Button isIconOnly radius="full" size="lg" onClick={unShiftLayout}>
+                <Button isIconOnly radius="full" size="lg" onClick={unShiftLayout} aria-label="Kembali ke halaman produk">
                   <BsXLg />
                 </Button>
                 <div className="w-full h-[2px] bg-gray-shade relative">

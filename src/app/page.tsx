@@ -13,8 +13,6 @@ import LeafSingle from "/public/leaf-single.webp";
 import RcpZen07 from "/public/rcp-zen-07.png";
 import RcpZen11 from "/public/rcp-zen-11.png";
 import RcpZen17 from "/public/rcp-zen-17.png";
-import Glassdoor from "/public/glassdoor.png";
-import Firefox from "/public/firefox.png";
 import { BsCheck, BsExclamationCircle } from "react-icons/bs";
 import { HiHandThumbUp } from "react-icons/hi2";
 import { Button } from "@nextui-org/button";
@@ -23,7 +21,8 @@ import { motion } from "framer-motion";
 import Ratings from "@/components/ratings";
 import Advertise from "@/components/advertise";
 import { globalVariants } from "@/animate/variants";
-import { MotionCard, MotionImage } from "@/animate/components";
+import { MotionImage } from "@/animate/components";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const imageSize = 400;
@@ -50,10 +49,10 @@ export default function Home() {
               Penyedia jasa cleaning service, jasa bersih-bersih kost, rumah, villa, restoran, apartemen dan kantor.
             </motion.p>
             <motion.div className="mt-8" variants={globalVariants}>
-              <Button variant="bordered" size="lg">
+              <Button variant="bordered" size="lg" aria-label="Tonton demo layanan pembersihan yang dilakukan oleh Kami" isDisabled>
                 Tonton Demo
               </Button>
-              <Button color="success" className="ml-4" size="lg">
+              <Button color="success" className="ml-4" size="lg" aria-label="Telusuri lini produk Kami" as={Link} href="/produk">
                 Telusuri Produk
               </Button>
             </motion.div>
@@ -83,39 +82,9 @@ export default function Home() {
             </div>
           </motion.div>
         </section>
-        <section className="py-20">
-          <motion.div className="max-w-3xl mx-auto" initial="hidden" whileInView="visible">
-            <motion.h2 className="text-center text-4xl" variants={globalVariants} viewport={{ once: true, margin: "-80px" }}>
-              Dipercaya oleh ribuan agensi dan perusahaan konsultan
-            </motion.h2>
-            <motion.div className="grid grid-cols-2 mt-8" variants={globalVariants} viewport={{ once: true, margin: "-80px" }}>
-              <div className="flex gap-12 border-r items-center">
-                <div className="flex flex-col items-center gap-2">
-                  <div>
-                    <Ratings rating={5} color="green" size={24} />
-                  </div>
-                  <p className="text-sm flex items-center gap-2">
-                    <Image src={Glassdoor} alt="Logo glassdoor" quality={80} height={16} />
-                    4.8/5 di Glassdoor
-                  </p>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div>
-                    <Ratings rating={5} color="green" size={24} />
-                  </div>
-                  <p className="text-sm flex items-center gap-2">
-                    <Image src={Firefox} alt="Logo firefox" quality={80} height={16} />
-                    5/5 di Firefox
-                  </p>
-                </div>
-              </div>
-              <p className="pl-16">Perusahaan jasa profesional yang sukses memakai jasa kami untuk merawat fasilitas mereka.</p>
-            </motion.div>
-          </motion.div>
-        </section>
-        <motion.section className="bg-beige-shade py-20 relative" initial="hidden" whileInView="visible">
+        <motion.section className="bg-beige-shade py-20 relative" initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <Image src={LeafSingle} alt="Daun jatuh" quality={80} height={200} className="absolute -top-8 right-10 rotate-90" />
-          <motion.div className="max-w-5xl mx-auto bg-white rounded-3xl p-10" variants={globalVariants} viewport={{ once: true }}>
+          <motion.div className="max-w-5xl mx-auto bg-white rounded-3xl p-10" variants={globalVariants}>
             <h2 className="rounded-full border border-gray-300 inline-block uppercase px-4 py-2 text-sm font-semibold">Kenapa Memilih Kami</h2>
             <article className="grid grid-cols-3 mt-14 gap-10">
               <div>
@@ -143,7 +112,9 @@ export default function Home() {
                 <h2 className="text-4xl">Dapatkan produk kebersihan premium</h2>
                 <p className="mt-5">Semua yang kamu butuhkan untuk solusi kebersihan dengan bahan organik dan ramah lingkungan.</p>
               </div>
-              <Button size="lg">Telusuri</Button>
+              <Button size="lg" aria-label="Telusuri berbagai produk premium yang Kami sediakan">
+                Telusuri
+              </Button>
             </div>
             <article className="flex w-full flex-col mt-8">
               <Tabs
@@ -194,8 +165,8 @@ export default function Home() {
           </motion.div>
         </motion.section>
         <section className="py-20">
-          <motion.div className="max-w-5xl mx-auto" initial="hidden" whileInView="visible">
-            <motion.h2 className="text-4xl text-center" variants={globalVariants} viewport={{ once: true, margin: "-80px" }}>
+          <motion.div className="max-w-5xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            <motion.h2 className="text-4xl text-center" variants={globalVariants}>
               Pilih layanan yang sesuai
             </motion.h2>
             <div className="flex w-full flex-col items-center tabs-main mt-6">
@@ -220,7 +191,9 @@ export default function Home() {
                             <span className="text-zinc-500"> /extra cleaners</span>
                           </p>
                         </div>
-                        <Button color="success">Pesan sekarang</Button>
+                        <Button color="success" aria-label="Pesan layanan Kami sekarang">
+                          Pesan sekarang
+                        </Button>
                       </CardHeader>
                       <Divider />
                       <CardBody className="py-8">
@@ -258,7 +231,9 @@ export default function Home() {
                             <span className="text-zinc-500"> /extra cleaners</span>
                           </p>
                         </div>
-                        <Button color="success">Pesan sekarang</Button>
+                        <Button color="success" aria-label="Pesan layanan Kami sekarang">
+                          Pesan sekarang
+                        </Button>
                       </CardHeader>
                       <Divider />
                       <CardBody className="py-8">
@@ -304,7 +279,9 @@ export default function Home() {
                             <span className="text-zinc-500"> /extra cleaners</span>
                           </p>
                         </div>
-                        <Button color="success">Pesan sekarang</Button>
+                        <Button color="success" aria-label="Pesan layanan Kami sekarang">
+                          Pesan sekarang
+                        </Button>
                       </CardHeader>
                       <Divider />
                       <CardBody className="py-8">
@@ -338,7 +315,9 @@ export default function Home() {
                             <span className="text-zinc-500"> /extra cleaners</span>
                           </p>
                         </div>
-                        <Button color="success">Pesan sekarang</Button>
+                        <Button color="success" aria-label="Pesan layanan Kami sekarang">
+                          Pesan sekarang
+                        </Button>
                       </CardHeader>
                       <Divider />
                       <CardBody className="py-8">
@@ -390,7 +369,9 @@ export default function Home() {
                             <span className="text-zinc-500"> /extra cleaners</span>
                           </p>
                         </div>
-                        <Button color="success">Pesan sekarang</Button>
+                        <Button color="success" aria-label="Pesan layanan Kami sekarang">
+                          Pesan sekarang
+                        </Button>
                       </CardHeader>
                       <Divider />
                       <CardBody className="py-8">
@@ -428,7 +409,9 @@ export default function Home() {
                             <span className="text-zinc-500"> /extra cleaners</span>
                           </p>
                         </div>
-                        <Button color="success">Pesan sekarang</Button>
+                        <Button color="success" aria-label="Pesan layanan Kami sekarang">
+                          Pesan sekarang
+                        </Button>
                       </CardHeader>
                       <Divider />
                       <CardBody className="py-8">
@@ -474,7 +457,9 @@ export default function Home() {
                             <span className="text-zinc-500"> /extra cleaners</span>
                           </p>
                         </div>
-                        <Button color="success">Pesan sekarang</Button>
+                        <Button color="success" aria-label="Pesan layanan Kami sekarang">
+                          Pesan sekarang
+                        </Button>
                       </CardHeader>
                       <Divider />
                       <CardBody className="py-8">
@@ -508,7 +493,9 @@ export default function Home() {
                             <span className="text-zinc-500"> /extra cleaners</span>
                           </p>
                         </div>
-                        <Button color="success">Pesan sekarang</Button>
+                        <Button color="success" aria-label="Pesan layanan Kami sekarang">
+                          Pesan sekarang
+                        </Button>
                       </CardHeader>
                       <Divider />
                       <CardBody className="py-8">

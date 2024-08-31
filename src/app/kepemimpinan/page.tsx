@@ -24,9 +24,7 @@ export default function Kepemimpinan() {
                     <Image src={Irene} alt="Irene as President Director of iClean" quality={80} className="w-full h-full" />
                   </CardBody>
                   <CardFooter className="px-0 block">
-                    <Link href="#" underline="hover">
-                      Irene Satiawati
-                    </Link>
+                    <Link>Irene Satiawati</Link>
                     <p>President Director</p>
                   </CardFooter>
                 </Card>
@@ -35,9 +33,7 @@ export default function Kepemimpinan() {
                     <Image src={Willy} alt="Willy as Director of iClean" quality={80} className="w-full h-full" />
                   </CardBody>
                   <CardFooter className="px-0 block">
-                    <Link href="#" underline="hover">
-                      Willy Yonathan
-                    </Link>
+                    <Link>Willy Yonathan</Link>
                     <p>Director</p>
                   </CardFooter>
                 </Card>
@@ -46,9 +42,7 @@ export default function Kepemimpinan() {
                     <Image src={Kenneth} alt="Kenneth as Head of Tech" quality={80} className="w-full h-full" />
                   </CardBody>
                   <CardFooter className="px-0 block">
-                    <Link href="#" underline="hover">
-                      Kenneth Matthew
-                    </Link>
+                    <Link>Kenneth Matthew</Link>
                     <p>Head of Tech</p>
                   </CardFooter>
                 </Card>
@@ -58,9 +52,7 @@ export default function Kepemimpinan() {
               <h2 className="text-3xl font-medium">Dewan Direksi</h2>
               <div className="grid grid-cols-4 gap-8 mt-8">
                 <div className="flex flex-col gap-1">
-                  <Link href="#" underline="hover">
-                    Irene Satiawati
-                  </Link>
+                  <Link>Irene Satiawati</Link>
                   <p className="text-sm">President Director</p>
                   <p className="text-sm">iClean</p>
                 </div>

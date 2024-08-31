@@ -102,7 +102,7 @@ export default function Footer() {
               <a href="#">Live Support</a>
             </li>
             <li>
-              <a href="#">Kontak Kami</a>
+              <a href="/kontak">Kontak Kami</a>
             </li>
             <li>
               <a href="#">Terms & Conditions</a>

@@ -24,7 +24,7 @@ export default function Advertise() {
                 <h2 className="uppercase text-3xl text-green-extra-shade font-black">Diskon 30% Untuk Pembelian Pertama</h2>
                 <Input type="email" label="Email (wajib)" className="mt-4" />
                 <Input type="text" label="Nomor Telfon" startContent={<Image src={Flag} alt="Bendera Indonesia" quality={80} />} />
-                <Button color="success" size="lg" className="uppercase font-semibold">
+                <Button color="success" size="lg" className="uppercase font-semibold" aria-label="Tukarkan kode promo Anda" isDisabled>
                   Tukarkan
                 </Button>
                 <small className="mt-3">Dengan berlangganan, Anda setuju untuk menerima pesan pemasaran otomatis berulang di email ini. </small>

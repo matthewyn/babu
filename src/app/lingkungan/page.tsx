@@ -24,7 +24,7 @@ export default function Lingkungan() {
           <motion.div className="text-center mx-auto max-w-3xl" initial="hidden" whileInView="visible">
             <div className="h-[calc(100vh_-_64px)] flex items-center">
               <motion.h1 className="text-6xl" variants={opacityVariants}>
-                <span className="text-3xl font-medium">Babu 2030</span>
+                <span className="text-3xl font-medium">iClean 2030</span>
                 <br />
                 <span className="mt-10 inline-block font-semibold">
                   Rencana yang
@@ -144,7 +144,7 @@ export default function Lingkungan() {
                 </h3>
                 <p className="text-xl mt-4">Baik untuk Anda dan Perusahaan.</p>
                 <Link href="/tips" className="mt-4 text-lg mx-auto" showAnchorIcon isExternal>
-                  Selengkapnya tentang tips dari Babu
+                  Selengkapnya tentang tips dari iClean
                 </Link>
               </CardBody>
             </Card>

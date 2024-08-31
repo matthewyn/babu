@@ -23,8 +23,8 @@ export default function Header() {
             Produk
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="/" aria-current="page">
+        <NavbarItem>
+          <Link color="foreground" href="/">
             Layanan
           </Link>
         </NavbarItem>
@@ -41,12 +41,12 @@ export default function Header() {
       </NavbarContent>
       <NavbarContent justify="end" className="border-b">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#" color="foreground">
+          <Link href="#" color="foreground" isDisabled>
             Log in
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="success" href="#" className="text-white">
+          <Button as={Link} color="success" href="#" className="text-white" aria-label="Lihat brosur Kami" isDisabled>
             Lihat Booklet
           </Button>
         </NavbarItem>
