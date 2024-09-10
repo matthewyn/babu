@@ -27,7 +27,6 @@ export default function Login() {
       setIsLoading(true);
       setErrors({ phoneNumber: "", password: "" });
       const formattedPhoneNumber = "+62" + phoneNumber;
-
       if (!isPasswordVisible) {
         await axios.post(`${getBaseUrl()}/api/actions/login`, {
           phoneNumber: formattedPhoneNumber,

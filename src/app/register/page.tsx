@@ -6,8 +6,9 @@ import AuthLeft from "/public/auth-leaves-left.png";
 import AuthRight from "/public/auth-leaves-right.png";
 import { getBaseUrl } from "@/utils/utils";
 import { FooterContextType, useFooterContext } from "@/context/is-footer";
+import PinRegister from "@/components/pin-register";
 import { FcGoogle } from "react-icons/fc";
-import { HiArrowLeft, HiOutlineEnvelope, HiOutlineEye } from "react-icons/hi2";
+import { HiArrowLeft, HiOutlineEye } from "react-icons/hi2";
 import { HiOutlineEyeOff } from "react-icons/hi";
 import { firebaseAuth } from "@/firebase";
 import axios from "axios";
@@ -179,40 +180,23 @@ export default function Register() {
                           Kebijakan Privasi iClean.
                         </Link>
                       </small>
-                      <div id="recaptcha-container" />
                     </>
                   ) : confirmationResult && !isVerified ? (
-                    <>
-                      <Button isIconOnly aria-label="Kembali" color="secondary" type="button" onClick={() => setConfirmationResult(null)}>
-                        <HiArrowLeft />
-                      </Button>
-                      <div className="text-center">
-                        <HiOutlineEnvelope color="var(--green-special)" size={40} className="mx-auto mt-8" />
-                        <h2 className="font-bold text-lg mt-4">Masukkan Kode Verifikasi</h2>
-                        <p className="text-sm mt-2">Kode verifikasi telah dikirim melalui e-mail ke +62{phoneNumber}.</p>
-                        <Input
-                          type="number"
-                          style={{ color: "black" }}
-                          variant="underlined"
-                          color="success"
-                          size="lg"
-                          classNames={{ input: ["text-3xl", "font-bold", "text-center", "tracking-[0.375em]"] }}
-                          className="mt-8"
-                          onChange={(e) => setPin(e.target.value)}
-                          value={pin}
-                        />
-                        <p className="text-sm mt-6">
-                          Tidak menerima kode?{" "}
-                          <Link underline="hover" className="text-sm">
-                            Kirim ulang
-                          </Link>
-                        </p>
-                      </div>
-                    </>
+                    <PinRegister pin={pin} setPin={setPin} phoneNumber={phoneNumber} setConfirmationResult={setConfirmationResult} recaptchaVerifier={recaptchaVerifier as RecaptchaVerifier} />
                   ) : (
                     <>
                       <div className="flex items-center gap-4">
-                        <Button isIconOnly aria-label="Kembali" color="secondary" type="button" onClick={() => setConfirmationResult(null)}>
+                        <Button
+                          isIconOnly
+                          aria-label="Kembali"
+                          color="secondary"
+                          type="button"
+                          onClick={() => {
+                            setPin("");
+                            setIsVerified(false);
+                            setConfirmationResult(null);
+                          }}
+                        >
                           <HiArrowLeft />
                         </Button>
                         <h2 className="text-lg font-bold">Daftar dengan Nomor Telfon</h2>
@@ -265,6 +249,7 @@ export default function Register() {
                       </small>
                     </>
                   )}
+                  <div id="recaptcha-container" />
                 </CardBody>
               </Card>
             </form>
