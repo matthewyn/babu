@@ -12,7 +12,7 @@ const config: Config = {
         "product-detail-clean": "url('/product-detail-clean.jpg')",
         "product-detail-safe": "url('/product-detail-safe.jpg')",
         "cleaner-single": "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/cleaner-single.jpg')",
-        ihome: "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/iHome.jpg')",
+        "login-banner": "url('/login-banner.png')",
       },
       colors: {
         "green-shade": "#008000",

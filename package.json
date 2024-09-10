@@ -6,16 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.4.2",
     "@nextui-org/react": "^2.4.6",
+    "@prisma/client": "^5.19.1",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/react-google-recaptcha": "^2.1.9",
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "firebase": "^10.13.1",
     "framer-motion": "^11.3.8",
     "next": "latest",
+    "next-auth": "^5.0.0-beta.20",
+    "patch-package": "^8.0.0",
     "react": "latest",
     "react-dom": "latest",
+    "react-google-recaptcha": "^3.1.0",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^5.2.1",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "latest",
@@ -25,6 +38,7 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
+    "prisma": "^5.19.1",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
